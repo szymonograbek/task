@@ -1,0 +1,14 @@
+.widget {
+  border-radius: 16px;
+  border: 2px solid rebeccapurple;
+  padding: 1rem;
+
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 680px) {
+  .widget {
+    max-width: 400px;
+  }
+}

@@ -13,13 +13,13 @@ export const Instructions = () => {
         When we toggle pills sometimes they are not able to fit on the same line
         and the last pill in the line is moved to the next line. We don't like
         this sudden layout change and we would like to lay out all the pills at
-        the beggining in a way that they won't move between lines when toggled.
+        the beginning in a way that they won't move between lines when toggled.
       </p>
       <h3>Requirements</h3>
       <ul>
         <li>
-          designers didn't allowed to make the pill same width in toggled and
-          untoggled state. It will always be wider when toggled on.
+          designers didn't allowed to make the pill same width in toggled on and
+          toggled off state. It will always be wider when toggled on.
         </li>
         <li>
           we want to have minimal number of pills lines as possible. We can't

@@ -4,9 +4,11 @@
 
 We created a set of exercises to check your frontend skills required for Software Engineer position at Surfer.
 
-## How to work in Codesandbox or github codespaces?
+## How to start working?
 
-// TODO: Instruct users about forking, sending solution to us etc.
+- Clone repository
+- Install dependencies: `npm i`
+- Start development server: `npm start`
 
 ## Rules
 
@@ -21,6 +23,10 @@ We created a set of exercises to check your frontend skills required for Softwar
 If you found a mistake in exercise or typo feel free to change our code. When we will be checking your solutions we will take that into account and fix this issue in the challenge for next candidates (you can treat the challenge as an open source project).
 
 We welcome any feedback you have for us (about the challenge or the whole recruitment process). Feel free to write it below.
+
+## Handoff
+
+- When you finish the challenge, please send us a link to your fork repository or zip file with your solution (don't forget to exclude `node_modules` and `build` directory)
 
 ## Challenges
 

@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { PillData } from "./data";
-import { Pill } from "./Pill";
+import React, { RefObject, useEffect } from 'react';
+import { PillData } from './data';
+import { Pill } from './Pill';
 
 interface PillsProps {
   pills: PillData[];
@@ -10,12 +10,12 @@ interface PillsProps {
 
 interface LayoutBreakElement {
   index: string;
-  type: "line-break";
+  type: 'line-break';
 }
 
 interface LayoutPillElement {
   index: string;
-  type: "pill";
+  type: 'pill';
   pill: PillData;
 }
 
@@ -23,21 +23,31 @@ type LayoutElement = LayoutBreakElement | LayoutPillElement;
 
 export function Pills({ pills, headers, toggleHeader }: PillsProps) {
   const containerNode = React.useRef<HTMLDivElement>(null);
+  const pillRefs = React.useRef<{ [id: PillData['id']]: HTMLDivElement }>({});
+
   const [layoutElements, setLayoutElements] = React.useState<LayoutElement[]>(
     () => {
       return pills.map((pill) => ({
         index: pill.id,
-        type: "pill",
+        type: 'pill',
         pill: pill,
       }));
     }
   );
 
+  console.log(pillRefs.current);
+
+  const setPillRef = (id: PillData['id'], node: HTMLDivElement) => {
+    if (node) {
+      pillRefs.current[id] = node;
+    }
+  };
+
   useEffect(() => {
     setLayoutElements(
       pills.map((pill) => ({
         index: pill.id,
-        type: "pill",
+        type: 'pill',
         pill: pill,
       }))
     );
@@ -46,7 +56,7 @@ export function Pills({ pills, headers, toggleHeader }: PillsProps) {
   return (
     <div ref={containerNode}>
       {layoutElements.map((el) => {
-        if (el.type === "line-break") {
+        if (el.type === 'line-break') {
           return <br key={`__${el.type}-${el.index}`} />;
         } else {
           return (
@@ -56,6 +66,7 @@ export function Pills({ pills, headers, toggleHeader }: PillsProps) {
               onClick={() => {
                 toggleHeader(el.pill.id);
               }}
+              ref={(element) => element && setPillRef(el.pill.id, element)}
             >
               {el.pill.value}
             </Pill>

@@ -10,7 +10,7 @@ export const Instructions = () => {
       </p>
       <h3>Problem</h3>
       <p>
-        Content in our iframe is dynamic and have different heights depending on
+        Content in our iframe is dynamic and have different height depending on
         the iframe width. This means that we have to dynamically set the iframe
         height to match the height of it's content.
       </p>
@@ -18,7 +18,8 @@ export const Instructions = () => {
       <p>
         With big screen width the iframe height currently is 117px and that's
         the value we set manually. However with small screen width (600px) the
-        iframe height is bigger and we see scrollbars in the iframe.
+        iframe height is bigger and we see scrollbars or content being cut in
+        the iframe.
       </p>
       <h3>Requirements</h3>
       <ul>
@@ -27,8 +28,8 @@ export const Instructions = () => {
           should be visible without scrollbars
         </li>
         <li>
-          iframe should not "flicker" (showing for a fraction of second iframe
-          with incorrect width/height)
+          iframe should not "flicker" on initial render (showing for a fraction
+          of second iframe with incorrect width/height)
         </li>
         <li>
           developer who worked on this task left the code a bit sloppy. Try to

@@ -5,7 +5,7 @@ import './widget.css';
 
 export const WidgetApp = () => {
   const [width, setWidth] = useState();
-  const iframeContainer = useRef();
+  const iframeContainer = useRef<any>();
 
   useEffect(() => {
     const measurements = iframeContainer.current.getBoundingClientRect();

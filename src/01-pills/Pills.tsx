@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { PillData } from './data';
 import { Pill } from './Pill';
 
@@ -35,14 +35,6 @@ export function Pills({ pills, headers, toggleHeader }: PillsProps) {
     }
   );
 
-  console.log(pillRefs.current);
-
-  const setPillRef = (id: PillData['id'], node: HTMLDivElement) => {
-    if (node) {
-      pillRefs.current[id] = node;
-    }
-  };
-
   useEffect(() => {
     setLayoutElements(
       pills.map((pill) => ({
@@ -52,6 +44,12 @@ export function Pills({ pills, headers, toggleHeader }: PillsProps) {
       }))
     );
   }, [pills]);
+
+  const setPillRef = (id: PillData['id'], node: HTMLDivElement) => {
+    if (node) {
+      pillRefs.current[id] = node;
+    }
+  };
 
   return (
     <div ref={containerNode}>

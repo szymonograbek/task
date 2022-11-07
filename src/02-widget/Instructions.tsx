@@ -28,6 +28,11 @@ export const Instructions = () => {
           should be visible without scrollbars
         </li>
         <li>
+          iframe is currently from the same origin, but the solution should work
+          also for cross origin iframe. That means that you can't access
+          internals (eg. document, window) of iframe from the widget itself.
+        </li>
+        <li>
           iframe should not "flicker" on initial render (showing for a fraction
           of second iframe with incorrect width/height)
         </li>
@@ -43,7 +48,7 @@ export const Instructions = () => {
       <h3>Tips</h3>
       <ul>
         <li>
-          use <code>window.postMessage</code> to communicate from iframe to
+          use <code>parent.postMessage</code> to communicate from iframe to
           widget
         </li>
       </ul>

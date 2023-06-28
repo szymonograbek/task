@@ -4,7 +4,7 @@ export const Instructions = () => {
       <h3>Intro</h3>
       <p>
         Underneath the horizontal line you see a number of pills. Each button
-        can be toggled to mark it's importance. Go ahead and click one. You will
+        can be toggled to mark its importance. Go ahead and click one. You will
         notice that the "H" appears on that pill. You can toggle any number of
         pills.
       </p>
@@ -18,7 +18,7 @@ export const Instructions = () => {
       <h3>Requirements</h3>
       <ul>
         <li>
-          designers didn't allowed to make the pill same width in toggled on and
+          designers didn't allow to make the pill same width in toggled on and
           toggled off state. It will always be wider when toggled on.
         </li>
         <li>
@@ -27,7 +27,9 @@ export const Instructions = () => {
           that would probably waste some space.
         </li>
         <li>pill will never ever change line during pills toggling</li>
-        <li>ideally only make changes in `Pills.tsx` file</li>
+        <li>
+          ideally only make changes in <code>Pills.tsx</code> file
+        </li>
         <li>
           <b>extra</b>: on browser window resize the pills layout will be
           updated to optimally use the new container width

@@ -38,7 +38,7 @@ export const Instructions = () => {
         </li>
         <li>
           developer who worked on this task left the code a bit sloppy. Try to
-          improve it in areas like Typescript and good React practices.
+          improve it in areas like TypeScript and good React practices.
         </li>
         <li>
           <b>extra</b>: when you dynamically change screen width iframe width

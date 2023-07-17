@@ -1,55 +1,59 @@
-import React from "react";
-import { examplePills } from "./data";
-import { Pills } from "./Pills";
-import { Instructions } from "./Instructions";
+import React from 'react'
+import { examplePills } from './data'
+import { Pills } from './Pills'
+import { Instructions } from './Instructions'
 
 interface SetHeaderAction {
-  type: "ToggleHeader";
-  payload: string;
+  type: 'ToggleHeader'
+  payload: string
 }
 
 const reducer = (state: string[], action: SetHeaderAction): string[] => {
-  if (action.type === "ToggleHeader") {
+  if (action.type === 'ToggleHeader') {
     if (state.includes(action.payload)) {
-      return state.filter((x) => x !== action.payload);
+      return state.filter(x => x !== action.payload)
     } else {
-      return [...state, action.payload];
+      return [...state, action.payload]
     }
   }
-  return state;
-};
+  return state
+}
 
 export const PillsApp = () => {
-  const [pills, setPills] = React.useState(examplePills);
+  const [pills, setPills] = React.useState(examplePills)
 
-  const [headers, dispatch] = React.useReducer(reducer, []);
+  const [headers, dispatch] = React.useReducer(reducer, [])
   const toggleHeader = (id: string) => {
     dispatch({
-      type: "ToggleHeader",
+      type: 'ToggleHeader',
       payload: id,
-    });
-  };
+    })
+  }
 
   const shufflePills = () => {
-    const newPills = [...pills];
+    const newPills = [...pills]
     // shuffle the array
-    newPills.sort(() => 0.5 - Math.random());
-    setPills(newPills);
-  };
+    newPills.sort(() => 0.5 - Math.random())
+    setPills(newPills)
+  }
 
   return (
     <>
       <Instructions />
       <button
         style={{
-          marginBottom: "4px",
+          marginBottom: '4px',
         }}
         onClick={shufflePills}
       >
         Shuffle pills
       </button>
       <hr />
-      <Pills pills={pills} headers={headers} toggleHeader={toggleHeader} />
+      <Pills
+        pills={pills}
+        headers={headers}
+        toggleHeader={toggleHeader}
+      />
     </>
-  );
-};
+  )
+}

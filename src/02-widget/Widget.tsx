@@ -1,17 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react'
 
-import './widget.css';
+import './widget.css'
 
 export const Widget = () => {
-  const [width, setWidth] = useState();
-  const iframeContainer = useRef<any>();
+  const [width, setWidth] = useState()
+  const iframeContainer = useRef<any>()
 
   useEffect(() => {
-    const measurements = iframeContainer.current.getBoundingClientRect();
+    const measurements = iframeContainer.current.getBoundingClientRect()
     if (measurements) {
-      setWidth(measurements.width);
+      setWidth(measurements.width)
     }
-  }, []);
+  }, [])
 
   return (
     <div className="widget">
@@ -32,5 +32,5 @@ export const Widget = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}

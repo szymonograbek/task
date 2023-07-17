@@ -1,6 +1,6 @@
-import React from 'react';
-import { Instructions } from './Instructions';
-import { Widget } from './Widget';
+import React from 'react'
+import { Instructions } from './Instructions'
+import { Widget } from './Widget'
 
 export const WidgetApp = () => {
   return (
@@ -9,5 +9,5 @@ export const WidgetApp = () => {
       <hr />
       <Widget />
     </>
-  );
-};
+  )
+}

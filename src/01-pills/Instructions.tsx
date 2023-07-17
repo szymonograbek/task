@@ -25,6 +25,7 @@ export const Instructions = () => {
           25% of line width for the wider buttons, because that would probably waste some space.
         </li>
         <li>pill will never ever change line during pills toggling</li>
+        <li>spacing between pills should be consistent</li>
         <li>
           ideally only make changes in <code>Pills.tsx</code> file
         </li>

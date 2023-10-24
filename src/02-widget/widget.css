@@ -7,8 +7,30 @@
   width: 100%;
 }
 
+.widget__container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.widget__iframe {
+   border: 0;
+   min-height: 117px;
+}
+
+.iframe-app {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+}
+
 @media (max-width: 680px) {
   .widget {
     max-width: 400px;
   }
+
+  .widget__iframe {
+    min-height: 154px;
+ }
 }

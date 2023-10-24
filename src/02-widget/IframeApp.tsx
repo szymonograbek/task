@@ -1,17 +1,7 @@
-import React from 'react'
+import { useSyncHeightWithParent } from './useSyncHeightWithParent'
 
 export const IframeApp = () => {
-  return (
-    <div
-      style={{
-        backgroundColor: 'rebeccapurple',
-        color: 'white',
-        padding: '2rem',
-        borderRadius: '1rem',
-        fontSize: '2rem',
-      }}
-    >
-      Dynamic marketing content will be here
-    </div>
-  )
+  useSyncHeightWithParent()
+
+  return <div className="iframe-app">Dynamic marketing content will be here</div>
 }

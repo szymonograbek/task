@@ -14,7 +14,6 @@
 
 .widget__iframe {
    border: 0;
-   min-height: 117px;
 }
 
 .iframe-app {
@@ -29,8 +28,4 @@
   .widget {
     max-width: 400px;
   }
-
-  .widget__iframe {
-    min-height: 154px;
- }
 }
